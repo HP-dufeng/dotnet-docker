@@ -1,0 +1,5 @@
+FROM registry.access.redhat.com/dotnet/dotnet-21-rhel7
+
+COPY certificateAuthorityCertificate.pem /etc/pki/ca-trust/source/anchors/certificateAuthorityCertificate.crt
+
+RUN update-ca-trust
